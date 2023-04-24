@@ -1,32 +1,14 @@
-// let numOrStr = prompt('input number or string');
-// console.log(numOrStr)
-
-// if(numOrStr === null) {
-// console.log('ви скасували')
-// } else if( numOrStr.trim() === '' ) {
-// console.log('Empty String');
-// } else if ( isNaN( +numOrStr ) ) {
-// console.log(' number is Ba_NaN')
-// } else {
-// console.log('OK!')
-// }
-
-let numOrStr = prompt('input number or string');
-console.log(numOrStr);
-
-switch (
-  true
-) {
-  case (numOrStr === null):
-    console.log('ви скасували');
-    break;
-  case (numOrStr.trim() === ''):
-    console.log('Empty String');
-    break;
-  case Number.isNaN(+numOrStr):
-    console.log('number is Ba_NaN');
-    break;
-  default:
-    console.log('OK!')
-    break
+let arr = [];
+let length = prompt("Введіть довжину масиву:");
+for (let i = 0; i < length; i++) {
+  let element = prompt("Введіть елемент масиву:");
+  arr.push(element);
 }
+
+arr.sort(function(a, b){return a-b}); 
+
+console.log("Відсортований масив: " + arr + "<br>");
+
+arr.splice(1, 3);
+
+console.log("Масив після видалення елементів з 2 по 4 (включно!): " + arr);
